@@ -1,4 +1,17 @@
-{% for cliente in cliente_list %}
-{{ cliente }}
-<hr>
-{% endfor %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de clientes</title>
+</head>
+<body>
+    {% for cliente in cliente_list %}
+    {{ cliente }}
+    <br>
+    {{ cliente.nit }}
+    <hr>
+    {% endfor %}
+</body>
+</html>
