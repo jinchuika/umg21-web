@@ -17,3 +17,12 @@ class Vehiculo(models.Model):
 
     def __str__(self) -> str:
         return f'{self.marca} - {self.modelo}'
+
+
+class Servicio(models.Model):
+    vehiculo = models.ForeignKey(Vehiculo, on_delete=models.CASCADE)
+    fecha = models.DateField()
+    anotaciones = models.TextField(null=True, blank=True)
+
+    def __str__(self) -> str:
+        return f'{self.vehiculo} - {self.fecha}'
