@@ -40,3 +40,40 @@ class ClienteDeleteView(DeleteView):
 
     def get_success_url(self):
         return reverse('cliente_list')
+
+
+class VehiculoListView(ListView):
+    model = Vehiculo
+    template_name = 'vehiculo_list.html'
+
+
+class VehiculoDetailView(DetailView):
+    model = Vehiculo
+    template_name = 'vehiculo_detail.html'
+
+
+class VehiculoCreateView(CreateView):
+    model = Vehiculo
+    template_name = 'vehiculo_form.html'
+    fields = '__all__'
+
+    def get_success_url(self):
+        return reverse('vehiculo_list')
+
+
+class VehiculoUpdateView(UpdateView):
+    model = Vehiculo
+    template_name = 'vehiculo_form.html'
+    fields = '__all__'
+
+    def get_success_url(self):
+        return reverse('vehiculo_list')
+
+
+class VehiculoDeleteView(DeleteView):
+    model = Vehiculo
+    template_name = 'vehiculo_delete.html'
+    fields = '__all__'
+
+    def get_success_url(self):
+        return reverse('vehiculo_list')

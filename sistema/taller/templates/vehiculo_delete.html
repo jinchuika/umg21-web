@@ -1,0 +1,7 @@
+<h1 style="color: green;">Está seguro de eliminar el vehiculo {{ object }}</h1>
+
+<form action="{{ action }}" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Eliminar</button>
+</form>
